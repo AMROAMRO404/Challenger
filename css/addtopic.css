@@ -90,6 +90,7 @@ select {
 }
 
 input[type=submit] {
+    outline: none;
     border: none;
     color: white;
     padding: 15px 32px;

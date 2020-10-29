@@ -17,6 +17,7 @@ body {
 }
 
 .btn-group button {
+    outline: none;
     border: 1px solid #707070;
     color: white;
     padding: 10px 24px;
@@ -87,6 +88,7 @@ body {
 }
 
 #button-div button {
+    outline: none;
     border-radius: 15px;
     height: 180px;
     width: 950px;
@@ -151,6 +153,7 @@ body {
 }
 
 #homepage-button2 {
+    outline: none;
     height: 100px;
     width: 500px;
     background-color: #9A24A9;
