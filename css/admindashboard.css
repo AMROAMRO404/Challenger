@@ -29,6 +29,10 @@ body {
 }
 
 .top-nav span {
+    text-transform: uppercase;
+}
+
+.top-nav span {
     padding: 14px 16px;
     display: block;
     font-size: 25px;

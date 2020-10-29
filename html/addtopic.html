@@ -4,11 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add topic</title>
+    <link rel="stylesheet" href="../css/addtopic.css">
 </head>
 
 <body>
+    <div class="top-nav">
+        <a class="active" href="#Challenger">Challenger</a>
+        <span>admin</span>
+    </div>
+    <div class="side-nav">
+        <a href="#Dashboard">Dashboard</a>
+        <a href="#Quizzes">Quizzes</a>
+        <a href="#Questions-base">Questions Base</a>
+        <a href="#Topics">Topics</a>
+        <a href="#Settings">Settings</a>
 
+    </div>
+
+    <div class="main">
+        <span>Add Topic</span>
+        <form id="topic-form" action="">
+            <label for="topic">Title</label><br>
+            <input type="text" id="topic" name="topic" placeholder="Ex : Angular"><br>
+            <input type="submit" value="Save">
+        </form>
+    </div>
 </body>
 
 </html>
