@@ -42,11 +42,11 @@ body {
 .side-nav {
     height: 100%;
     width: 230px;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     left: 0;
     background-color: #ccc3c3;
-    overflow-x: hidden;
+    overflow-x: auto;
     padding-top: 20px;
 }
 
