@@ -1,0 +1,142 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.top-nav {
+    margin: 0;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #f336e3, #ac51a4);
+}
+
+.top-nav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 27px;
+}
+
+.top-nav a:hover {
+    color: #a3199f;
+}
+
+.top-nav span {
+    text-transform: uppercase;
+}
+
+.top-nav span {
+    padding: 14px 16px;
+    display: block;
+    font-size: 25px;
+    white-space: normal;
+}
+
+.side-nav {
+    height: 100%;
+    width: 230px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    background-color: #ccc3c3;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.side-nav a {
+    line-height: 3;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+}
+
+.side-nav a:hover {
+    color: #a3199f;
+}
+
+.main {
+    margin-left: 230px;
+    font-size: 28px;
+    padding: 20px 30px;
+}
+
+.main label {
+    opacity: 0.7;
+    font-size: 20px;
+}
+
+.main span {
+    color: #a3199f;
+}
+
+input[type=text],
+select {
+    font-size: 20px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 8px 4px;
+    cursor: pointer;
+    border-radius: 40px;
+    font-size: 20px;
+    background-image: linear-gradient(to right, #f336e3, #ac51a4);
+}
+
+#question-form button:nth-of-type(1) {
+    border: none;
+    color: white;
+    padding: 7.5px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 20px;
+    background-image: linear-gradient(to right, #a3ccaf, #33db79);
+}
+
+#question-form button:nth-of-type(2) {
+    border: none;
+    color: white;
+    padding: 7.5px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 20px;
+    background-image: linear-gradient(to right, #d197a4, #ee3841);
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}

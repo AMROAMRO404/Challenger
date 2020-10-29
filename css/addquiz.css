@@ -74,6 +74,10 @@ body {
     font-size: 20px;
 }
 
+.main span {
+    color: #a3199f;
+}
+
 input[type=text],
 select {
     font-size: 20px;

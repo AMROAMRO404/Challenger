@@ -74,6 +74,10 @@ body {
     font-size: 20px;
 }
 
+.main span {
+    color: #a3199f;
+}
+
 input[type=text],
 select {
     width: 100%;
@@ -97,6 +101,18 @@ input[type=submit] {
     border-radius: 40px;
     font-size: 20px;
     background-image: linear-gradient(to right, #f336e3, #ac51a4);
+}
+
+input[type=text],
+select {
+    font-size: 20px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 @media screen and (max-height: 450px) {
