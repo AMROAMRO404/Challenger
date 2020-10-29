@@ -4,11 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add Quiz</title>
+    <link rel="stylesheet" href="../css/addquiz.css">
 </head>
 
 <body>
+    <div class="top-nav">
+        <a class="active" href="#Challenger">Challenger</a>
+        <span>admin</span>
+    </div>
+    <div class="side-nav">
+        <a href="#Dashboard">Dashboard</a>
+        <a href="#Quizzes">Quizzes</a>
+        <a href="#Questions-base">Questions Base</a>
+        <a href="#Topics">Topics</a>
+        <a href="#Settings">Settings</a>
 
+    </div>
+
+    <div class="main">
+        <span>Add Topic</span>
+        <form id="topic-form" action="">
+            <label for="topic">Title</label><br>
+            <input type="text" id="title" name="title" placeholder="Ex : Angular">
+            <br>
+            <label for="topic">Topic</label><br>
+            <select type="text" id="topic" name="topic">
+            </select>
+            <label for="num-questions">Number Of Questions</label><br>
+            <input type="text" id="num-questions" name="num-questions" placeholder="Ex : 5"><br>
+
+
+            <br>
+            <input type="submit" value="Save">
+        </form>
+    </div>
 </body>
 
 </html>
