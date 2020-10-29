@@ -1,45 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
+let topics = []; function saveTopic() { // Check for LocalStorage support. if (localStorage) { // Add an event listener for form submissions // Get the value of the name field. let title = document.getElementById('title').value; // Save the name in localStorage.
+localStorage.setItem('title', title); let Gettitle = localStorage.getItem('title'); topics.push(Gettitle); } console.log(topics.length); } <a href="#Dashboard">Dashboard</a>
+<a href="#Quizzes">Quizzes</a>
+<a href="#Questions-base">Questions Base</a>
+<a href="#Topics">Topics</a>
+<a href="#Settings">Settings</a>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Questions</title>
-    <link rel="stylesheet" href="../css/addquestion.css">
-</head>
+</div>
 
-<body>
-    <div class="top-nav">
-        <a class="active" href="#Challenger">Challenger</a>
-        <span>admin</span>
-    </div>
-    <div class="side-nav">
-        <a href="#Dashboard">Dashboard</a>
-        <a href="#Quizzes">Quizzes</a>
-        <a href="#Questions-base">Questions Base</a>
-        <a href="#Topics">Topics</a>
-        <a href="#Settings">Settings</a>
-
-    </div>
-
-    <div class="main">
-        <span>Add Question</span><br><br>
-        <form id="question-form" action="">
-            <label for="title">Question</label><br>
-            <input type="text" id="title" name="title">
-            <br>
-            <label for="topic">Topic</label><br>
-            <select type="text" id="topic" name="topic">
+<div class="main">
+    <span>Add Question</span><br><br>
+    <div id="question-form" action="">
+        <label for="title">Question</label><br>
+        <input type="text" id="title" name="title">
+        <br>
+        <label for="topic">Topic</label><br>
+        <select type="text" id="topic" name="topic">
             </select>
-            <label for="Options">Options</label><br>
-            <input type="text" id="Options" name="Options"><br>
-            <button>Add another Option</button>
-            <button>Delete Option</button>
-            <br>
-            <br>
-            <input type="submit" value="Save">
-        </form>
+        <label for="options">Options</label><br>
+        <input type="text" id="options" name="Options"><br>
+        <button>Add another Option</button>
+        <button>Delete Option</button>
+        <br>
+        <br>
+        <input onclick="saveQuestion()" type="submit" value="Save">
     </div>
+</div>
+<script type="text/javascript" src="../js/addquestion.js"></script>
 </body>
 
 </html>
