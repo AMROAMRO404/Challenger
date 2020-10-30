@@ -1,32 +1,52 @@
+let retrievedData = localStorage.getItem("topics");
+let topicsFromLocal = JSON.parse(retrievedData);
+document.getElementById("topic").innerHTML = "";
+for (let i = 0; i < topicsFromLocal.length; i++) {
+    document.getElementById("topic").innerHTML += "<option>" + topicsFromLocal[i] + "</option>";
+}
 let questions = [];
+
+let optionsArray = [];
+let i = 0;
+let arrayOfOption = [];
+
+function fillOptionsToGother() {
+    let options = document.getElementById('option');
+    localStorage.setItem('arrayOfOption', JSON.stringify(arrayOfOption));
+    arrayOfOption.push(options.value);
+    document.getElementById('option').value = '';
+    return arrayOfOption;
+
+}
 
 function saveQuestion() {
 
     // Check for LocalStorage support.
     if (localStorage) {
-        // Add an event listener for form submissions
-
-        // Get the value of the name field.
-        var title = document.getElementById('title').value;
-        var topic = document.getElementById('topic').value;
-        var option = document.getElementById('options').value;
-        // Save the name in localStorage.
-        localStorage.setItem('title', title);
-        localStorage.setItem('topic', topic);
-        localStorage.setItem('options', option);
-
-        var title = localStorage.getItem('title');
-        var topic = localStorage.getItem('topic');
-        var option = localStorage.getItem('option');
-        let question = {
-            "title": title,
-            "topic": topic,
-            "option": option
-
-        }
+        let question = document.getElementById('question').value;
         questions.push(question);
+        //store array into localstorage
+        localStorage.setItem("questions", JSON.stringify(questions));
+        let arrayHoldOptions = fillOptionsToGother();
+        optionsArray.push(arrayHoldOptions);
+        localStorage.setItem('optionsArray', JSON.stringify(optionsArray));
+        i++;
     }
-    for (let i = 0; i < questions.length; i++) {
-        console.log(questions[i].title);
-    }
+
+    //reinitialize the array
+    arrayOfOptions = [];
+    document.getElementById('question').value = '';
+    console.log(localStorage.getItem('questions'));
+    console.log(localStorage.getItem('arrayOfOption'));
+    console.log(localStorage.getItem('optionsArray'));
+    console.log(localStorage.getItem('topics'));
 }
+
+
+function addOption() {
+    document.getElementById("options-list").innerHTML = '<input type="text" id="option" name="options[]">';
+}
+
+// function deleteOption() {
+//     document.getElementById("options-list").innerHTML -= '<input type="text" name="options[options.length]">';
+// }

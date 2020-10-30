@@ -9,4 +9,5 @@ function saveTopic() {
         localStorage.setItem("topics", JSON.stringify(topics));
     }
     console.log(topics.length);
+    document.getElementById('title').value = '';
 }

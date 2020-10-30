@@ -25,16 +25,19 @@
     <div class="main">
         <span>Add Question</span><br><br>
         <div id="question-form" action="">
-            <label for="title">Question</label><br>
-            <input type="text" id="title" name="title">
+            <label for="question">Question</label><br>
+            <input type="text" id="question" name="title">
             <br>
             <label for="topic">Topic</label><br>
             <select type="text" id="topic" name="topic">
             </select>
-            <label for="options">Options</label><br>
-            <input type="text" id="options" name="Options"><br>
-            <button>Add another Option</button>
-            <button>Delete Option</button>
+            <label for="option">Options</label><br>
+            <div id="options-list">
+                <input type="text" id="option" name="options[]"><br>
+            </div>
+
+            <button onclick="fillOptionsToGother()">Add another Option</button>
+            <button onclick="deleteOption()">Delete Last Option</button>
             <br>
             <br>
             <input onclick="saveQuestion()" type="submit" value="Save">
