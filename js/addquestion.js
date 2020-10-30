@@ -33,6 +33,7 @@ function saveQuestion() {
         localStorage.setItem("questions", JSON.stringify(questions));
         let arrayHoldOptions = fillOptionsToGother();
         optionsArray.push(arrayHoldOptions);
+        arrayOfOption = [];
         localStorage.setItem('optionsArray', JSON.stringify(optionsArray));
         i++;
     }

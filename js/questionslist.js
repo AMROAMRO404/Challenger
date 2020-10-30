@@ -7,7 +7,9 @@ function showData() {
     let optionsArrayFromLocal = JSON.parse(retrievedData3);
     document.getElementById("display").innerHTML = "<tr>" + "<th>" + "Question description" + "</th>" + "<th>" + "Topic Name" + "</th>" + "<th>" + "Options" + "</th>" + "<tr>";
     for (let i = 0; i < questionFromLocal.length; i++) {
-        document.getElementById("display").innerHTML += "<tr>" + "<td>" + questionFromLocal[i] + "</td>" + "<td>" + topicsFromLocal[i] + "</td>" + "<td>" + optionsArrayFromLocal[i] + "</td>" + "</tr>";
+        let topicsList = document.getElementsByName('topic').value;
+        //let selectedTopic = topicsList.options[topicsList.selectedIndex].text;
+        document.getElementById("display").innerHTML += "<tr>" + "<td>" + questionFromLocal[i] + "</td>" + "<td>" + topicsList + "</td>" + "<td>" + optionsArrayFromLocal[i] + "</td>" + "</tr>";
     }
 }
 
