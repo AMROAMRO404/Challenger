@@ -4,11 +4,10 @@ document.getElementById("topic").innerHTML = "";
 for (let i = 0; i < topicsFromLocal.length; i++) {
     document.getElementById("topic").innerHTML += "<option>" + topicsFromLocal[i] + "</option>";
 }
-let questions = [];
-
-let optionsArray = [];
 let i = 0;
+let questions = [];
 let arrayOfOption = [];
+let optionsArray = [];
 
 function fillOptionsToGother() {
     let options = document.getElementById('option');
@@ -17,6 +16,11 @@ function fillOptionsToGother() {
     document.getElementById('option').value = '';
     return arrayOfOption;
 
+}
+
+function deleteOption() {
+    document.getElementById('option').value = '';
+    arrayOfOption.pop();
 }
 
 function saveQuestion() {
@@ -41,12 +45,3 @@ function saveQuestion() {
     console.log(localStorage.getItem('optionsArray'));
     console.log(localStorage.getItem('topics'));
 }
-
-
-function addOption() {
-    document.getElementById("options-list").innerHTML = '<input type="text" id="option" name="options[]">';
-}
-
-// function deleteOption() {
-//     document.getElementById("options-list").innerHTML -= '<input type="text" name="options[options.length]">';
-// }
