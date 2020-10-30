@@ -26,7 +26,7 @@
         <span>Add Quiz</span><br><br>
         <div id="quiz-form" action="">
             <label for="title">Title</label><br>
-            <input type="text" id="title" name="title" placeholder="Ex : Angular">
+            <input type="text" id="title" name="title">
             <br>
             <label for="topic">Topic</label><br>
             <select type="text" id="topic" name="topic">
@@ -34,9 +34,10 @@
             <label for="num-questions">Number Of Questions</label><br>
             <input type="text" id="num-questions" name="num-questions" placeholder="Ex : 5"><br>
             <br>
-            <input type="submit" value="Save">
+            <input type="submit" onclick="saveQuiz()" value="Save">
         </div>
     </div>
+    <script type="text/javascript" src="../js/addquiz.js"></script>
 </body>
 
 </html>
