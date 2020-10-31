@@ -39,6 +39,8 @@ function saveQuestion() {
         questions.push(questionObject);
         //store array into localstorage
         localStorage.setItem("questions", JSON.stringify(questions));
+
+        //just for testig
         localStorage.setItem("questionsTitle", JSON.stringify(questionsTitle));
         optionsArray.push(arrayHoldOptions);
         arrayOfOption = [];

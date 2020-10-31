@@ -1,16 +1,30 @@
 let retrievedData = localStorage.getItem("topics");
 let topicsFromLocal = JSON.parse(retrievedData);
+document.getElementById("topic").innerHTML = "";
+for (let i = 0; i < topicsFromLocal.length; i++) {
+    document.getElementById("topic").innerHTML += "<option value= " + topicsFromLocal[i] + " >" + topicsFromLocal[i] + "</option>";
+}
 
-let titles = [];
+
+
+let quizzez = [];
 
 function saveQuiz() {
     // Check for LocalStorage support.
     if (localStorage) {
-        let title = document.getElementById('title').value;
-        titles.push(title);
+        let title = document.getElementById('quiz-title').value;
+        let selectedTopic = document.getElementById("topic").value;
+        let numberOfQuestion = document.getElementById('num-questions').value;
+        let quiz = {
+            "quizTitle": title,
+            "topic": selectedTopic,
+            "numberOfquestions": numberOfQuestion
+        }
+        quizzez.push(quiz);
         //store array into localstorage
-        localStorage.setItem("titles", JSON.stringify(titles));
+        localStorage.setItem("quizzez", JSON.stringify(quizzez));
     }
-    console.log(titles.length);
-    document.getElementById('title').value = '';
+    console.log(quizzez);
+    document.getElementById('quiz-title').value = '';
+    document.getElementById('num-questions').value = '';
 }
