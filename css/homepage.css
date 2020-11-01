@@ -87,6 +87,21 @@ body {
     font-size: 15px;
 }
 
+#subjects button {
+    outline: none;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 8px 4px;
+    cursor: pointer;
+    border-radius: 40px;
+    font-size: 20px;
+    background-image: linear-gradient(to right, #f336e3, #ac51a4);
+}
+
 #button-div button {
     outline: none;
     border-radius: 15px;
