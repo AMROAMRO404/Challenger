@@ -179,6 +179,7 @@ body {
 }
 
 #titles2 {
+    width: 500px;
     float: left;
     padding-bottom: 150px;
 }
