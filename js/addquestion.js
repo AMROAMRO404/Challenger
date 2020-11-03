@@ -10,11 +10,25 @@ let arrayOfOption = [];
 let optionsArray = [];
 let questions = [];
 
-function fillOptionsToGother() {
-    let options = document.getElementById('option');
+let isCorrecct = false;
+
+function addAnotherOption() {
+
+    let options = document.getElementById('option').value;
+
+    document.getElementById("correctness").onclick = function() {
+        isCorrecct = true;
+        console.log("i clicked");
+    }
+    let optionsWithCorrectness = {
+        "options": options,
+        "correctness": isCorrecct
+    };
+    arrayOfOption.push(optionsWithCorrectness);
     localStorage.setItem('arrayOfOption', JSON.stringify(arrayOfOption));
-    arrayOfOption.push(options.value);
+
     document.getElementById('option').value = '';
+    isCorrecct = false;
     return arrayOfOption;
 
 }
@@ -30,7 +44,7 @@ function saveQuestion() {
     if (localStorage) {
         let questionTitle = document.getElementById('question-title').value;
         let selectedTopic = document.getElementById("topic").value;
-        let arrayHoldOptions = fillOptionsToGother();
+        let arrayHoldOptions = addAnotherOption();
         let questionObject = {
             "title": questionTitle,
             "topic": selectedTopic,
