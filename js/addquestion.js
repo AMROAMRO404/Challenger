@@ -41,7 +41,27 @@ function deleteOption() {
 function saveQuestion() {
 
     // Check for LocalStorage support.
-    if (localStorage) {
+    if (localStorage.questions) {
+        let questionTitle = document.getElementById('question-title').value;
+        let selectedTopic = document.getElementById("topic").value;
+        let arrayHoldOptions = addAnotherOption();
+        let questionObject = {
+            "title": questionTitle,
+            "topic": selectedTopic,
+            "options": arrayHoldOptions
+        };
+        questions = JSON.parse(localStorage.questions);
+        questions.push(questionObject);
+        //store array into localstorage
+        localStorage.setItem("questions", JSON.stringify(questions));
+
+        //just for testing
+        localStorage.setItem("questionsTitle", JSON.stringify(questionsTitle));
+        optionsArray.push(arrayHoldOptions);
+        arrayOfOption = [];
+        localStorage.setItem('optionsArray', JSON.stringify(optionsArray));
+        i++;
+    } else {
         let questionTitle = document.getElementById('question-title').value;
         let selectedTopic = document.getElementById("topic").value;
         let arrayHoldOptions = addAnotherOption();
@@ -54,7 +74,7 @@ function saveQuestion() {
         //store array into localstorage
         localStorage.setItem("questions", JSON.stringify(questions));
 
-        //just for testig
+        //just for testing
         localStorage.setItem("questionsTitle", JSON.stringify(questionsTitle));
         optionsArray.push(arrayHoldOptions);
         arrayOfOption = [];
